@@ -22,7 +22,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.homiedev.DrinkIt</string>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>drinkit</string>

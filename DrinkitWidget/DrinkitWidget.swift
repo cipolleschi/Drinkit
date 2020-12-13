@@ -50,7 +50,7 @@ struct DrinkitEntry: TimelineEntry {
   }
 }
 
-struct DrinkitWidgetEntryView : View {
+struct WidgetView : View {
   @Environment(\.widgetFamily) var family: WidgetFamily
   var entry: Provider.Entry
 
@@ -152,7 +152,7 @@ struct DrinkitWidget: Widget {
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
-      DrinkitWidgetEntryView(entry: entry)
+      WidgetView(entry: entry)
     }
     .configurationDisplayName("DrinkIt Widget")
     .description("Widget of the DrinkIt app")
@@ -162,7 +162,7 @@ struct DrinkitWidget: Widget {
 
 struct DrinkitWidget_Previews: PreviewProvider {
   static var previews: some View {
-    DrinkitWidgetEntryView(entry: DrinkitEntry(date: Date(), waterDrank: 250))
+    WidgetView(entry: DrinkitEntry(date: Date(), waterDrank: 250))
       .previewContext(WidgetPreviewContext(family: .systemLarge))
   }
 }

@@ -37,10 +37,10 @@ class Storage {
   }
 
   static func addWater(amount: Int) {
-    Storage.updateDrankWater { return $0 + 250 }
+    Storage.updateDrankWater { return $0 + amount }
   }
 
   static func remWater(amount: Int) {
-    Storage.updateDrankWater { return max($0 - 250, 0) }
+    Storage.updateDrankWater { return max($0 - amount, 0) }
   }
 }
