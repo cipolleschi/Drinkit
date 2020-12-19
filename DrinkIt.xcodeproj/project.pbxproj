@@ -19,6 +19,8 @@
 		463FFDE62584D08A00ACDF3F /* DrinkitWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 463FFDDB2584D08A00ACDF3F /* DrinkitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		463FFE2B2585180C00ACDF3F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FFE2A2585180C00ACDF3F /* Storage.swift */; };
 		463FFE2F2585181B00ACDF3F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FFE2A2585180C00ACDF3F /* Storage.swift */; };
+		4643D8BE258BF8210048478C /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643D8BD258BF8210048478C /* InfoVC.swift */; };
+		4643D8C1258BF8570048478C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643D8C0258BF8570048478C /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		463FFDF6258516D600ACDF3F /* DrinkIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrinkIt.entitlements; sourceTree = "<group>"; };
 		463FFDFD2585175100ACDF3F /* DrinkitWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrinkitWidgetExtension.entitlements; sourceTree = "<group>"; };
 		463FFE2A2585180C00ACDF3F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		4643D8BD258BF8210048478C /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		4643D8C0258BF8570048478C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		4600B063258280B500B1E9AC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4643D8BB258BF73A0048478C /* Info */,
 				4600B0502582803500B1E9AC /* DrinkVC.swift */,
 				4600B065258280E500B1E9AC /* DrinkView.swift */,
 			);
@@ -154,6 +159,15 @@
 				463FFDE32584D08A00ACDF3F /* Info.plist */,
 			);
 			path = DrinkitWidget;
+			sourceTree = "<group>";
+		};
+		4643D8BB258BF73A0048478C /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				4643D8BD258BF8210048478C /* InfoVC.swift */,
+				4643D8C0258BF8570048478C /* InfoView.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,8 @@
 				463FFE2B2585180C00ACDF3F /* Storage.swift in Sources */,
 				4600B066258280E500B1E9AC /* DrinkView.swift in Sources */,
 				4600B04D2582803500B1E9AC /* AppDelegate.swift in Sources */,
+				4643D8C1258BF8570048478C /* InfoView.swift in Sources */,
+				4643D8BE258BF8210048478C /* InfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
