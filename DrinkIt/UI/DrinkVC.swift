@@ -39,6 +39,10 @@ class DrinkVC: UIViewController {
       self.rootView.vm = vm
     }
 
+    self.rootView.userDidTapInfo = { [unowned self] in
+      self.present(InfoVC(), animated: true, completion: nil)
+    }
+
   }
 }
 

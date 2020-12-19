@@ -50,9 +50,11 @@ class DrinkView: UIView {
   fileprivate let remButton = UIButton()
   fileprivate let backgroundRect = UIView()
   fileprivate let foregroundRect = UIView()
+  fileprivate let infoButton = UIButton()
 
   var userDidTapAddWater: (() -> ())?
   var userDidTapRemWater: (() -> ())?
+  var userDidTapInfo: (() -> ())?
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -70,9 +72,11 @@ class DrinkView: UIView {
     self.addSubview(self.remButton)
     self.addSubview(self.backgroundRect)
     self.backgroundRect.addSubview(self.foregroundRect)
+    self.addSubview(self.infoButton)
 
     self.addButton.addTarget(self, action: #selector(self.addButtontapped), for: .touchUpInside)
     self.remButton.addTarget(self, action: #selector(self.remButtontapped), for: .touchUpInside)
+    self.infoButton.addTarget(self, action: #selector(self.infoButtonTapped), for: .touchUpInside)
 
   }
 
@@ -82,6 +86,10 @@ class DrinkView: UIView {
 
   @objc func remButtontapped(_ sender: UIButton) {
     self.userDidTapRemWater?()
+  }
+
+  @objc func infoButtonTapped(_ sender: UIButton) {
+    self.userDidTapInfo?()
   }
 
   func style() {
@@ -97,6 +105,9 @@ class DrinkView: UIView {
     self.backgroundRect.backgroundColor = .clear
 
     self.foregroundRect.backgroundColor = .systemBlue
+
+    self.infoButton.setImage(UIImage(systemName: "info"), for: .normal)
+    self.infoButton.tintColor = .systemBlue
 
   }
 
@@ -120,6 +131,13 @@ class DrinkView: UIView {
 
   override func layoutSubviews() {
     super.layoutSubviews()
+
+    self.infoButton.frame = .init(
+      x: self.bounds.width - 20 - 44,
+      y: self.safeAreaInsets.top + 20,
+      width: 44,
+      height: 44
+    )
 
     self.targetLabel.frame = .zero
     self.targetLabel.sizeToFit()
